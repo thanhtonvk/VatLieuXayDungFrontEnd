@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QT</title>
+    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="./assets/fonts-icon/themify-icons/themify-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link type="text/css" href="../files/css/main.css" rel="stylesheet" />
+    <script type="text/javascript" src="../files/js/jquery_min.js"></script>
+    <script type="text/javascript" src="../files/js/danhmuc.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="sidebar-wrapper">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <img src="/assets/img/logo/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <ul class="nav">
+
+                        <li>
+                            <a href="./admin-danhmuc.html" class="c-danger active">
+                                <i class="ti-panel mrl"></i>
+                                <p>Quản lý danh mục</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./admin-sanpham.html">
+                                <i class="ti-user mrl"></i>
+                                <p>Quản lý sản phẩm</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./admin-donhang.html">
+                                <i class="ti-view-list-alt mrl"></i>
+                                <p>Đơn hàng</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-panel">
+
+                <div class="main-content">
+                    <!--CONTENT-->
+                    <div class="content">
+                        <span class="ketquatimkiem">Tìm thấy 200 kết quả.</span>
+
+                        <!--TIM KIEM-->
+                        <form class="timkiem" name="frmTimKiem" id="frmTimKiem" method="post">
+                            <input type="search" class="txt" name="txtSearch" id="txtSearch" placeholder="Nhập từ khoá cần tìm" style="width: 250px;" />
+                        </form>
+                        <!--END TIM KIEM-->
+
+                        <!--DANH SACH-->
+                        <div class="danhsach">
+                            <ul class="danhsach-header">
+                                <li style="width:60px;">ID</li>
+                                <li style="width:250px;">Khách hàng</li>
+                                <li style="width:100px;">Ngày lập</li>
+                                <li style="width:200px;">Tổng tiền</li>
+                                <li style="width:100px; float:right; text-align:right;">
+                                </li>
+                            </ul>
+                            <div class="danhsach-chitiet">
+                                <ul class="danhsach-item">
+                                    <li style="width:60px;">1</li>
+                                    <li style="width:250px;">Trần Đình Nam</li>
+                                    <li style="width:100px;">27/03/2022</li>
+                                    <li style="width:200px;">17.455.000</li>
+                                    <li style="width:100px; float:right; text-align:right;">
+                                        <a class="lnkSua lnkChiTiet" name="btnChiTiet1" id="btnChiTiet1" data-id="1" data-trangthai="0" title="Xem chi tiết" href="#">Chi tiết</a>
+                                    </li>
+                                </ul>
+                                <div class="danhsach-subitem" id="chiTietDonHang1">
+                                    <ul class="danhsach-subitem-header">
+                                        <li style="width:250px;">Sản phẩm</li>
+                                        <li style="width:100px;">Số lượng</li>
+                                        <li style="width:130px;">Đơn giá</li>
+                                        <li style="width:200px;">Tổng tiền</li>
+                                    </ul>
+                                    <ul class="danhsach-subitem-item">
+                                        <li style="width:250px;">Sh 150cc</li>
+                                        <li style="width:100px;">1</li>
+                                        <li style="width:130px;">120.200.000</li>
+                                        <li style="width:200px;">1.200.000</li>
+                                    </ul>
+                                    <ul class="danhsach-subitem-item">
+                                        <li style="width:250px;">Đèn nháy</li>
+                                        <li style="width:100px;">2</li>
+                                        <li style="width:130px;">55.000</li>
+                                        <li style="width:200px;">110.000</li>
+                                    </ul>
+                                    <ul class="danhsach-subitem-item">
+                                        <li style="width:250px;">Bảo hiểm</li>
+                                        <li style="width:100px;">1</li>
+                                        <li style="width:130px;">145.000</li>
+                                        <li style="width:200px;">145.000</li>
+                                    </ul>
+                                </div>
+
+                                <ul class="danhsach-item">
+                                    <li style="width:60px;">2</li>
+                                    <li style="width:250px;">Nguyễn Quốc Tuấn</li>
+                                    <li style="width:100px;">29/03/2022</li>
+                                    <li style="width:200px;">20.050.000</li>
+                                    <li style="width:100px; float:right; text-align:right;">
+                                        <a class="lnkSua lnkChiTiet" name="btnChiTiet2" id="btnChiTiet2" data-id="2" data-trangthai="0" title="Xem chi tiết" href="#">Chi tiết</a>
+                                    </li>
+                                </ul>
+                                <div class="danhsach-subitem" id="chiTietDonHang2">
+                                    <ul class="danhsach-subitem-header">
+                                        <li style="width:250px;">Sản phẩm</li>
+                                        <li style="width:100px;">Số lượng</li>
+                                        <li style="width:130px;">Đơn giá</li>
+                                        <li style="width:200px;">Tổng tiền</li>
+                                    </ul>
+                                    <ul class="danhsach-subitem-item">
+                                        <li style="width:250px;">Sh 150cc</li>
+                                        <li style="width:100px;">1</li>
+                                        <li style="width:130px;">120.200.000</li>
+                                        <li style="width:200px;">1.200.000</li>
+                                    </ul>
+                                    <ul class="danhsach-subitem-item">
+                                        <li style="width:250px;">Đèn nháy</li>
+                                        <li style="width:100px;">2</li>
+                                        <li style="width:130px;">55.000</li>
+                                        <li style="width:200px;">110.000</li>
+                                    </ul>
+                                    <ul class="danhsach-subitem-item">
+                                        <li style="width:250px;">Bảo hiểm</li>
+                                        <li style="width:100px;">1</li>
+                                        <li style="width:130px;">145.000</li>
+                                        <li style="width:200px;">145.000</li>
+                                    </ul>
+                                </div>
+
+                                <ul class="danhsach-item">
+                                    <li style="width:60px;">3</li>
+                                    <li style="width:250px;">Vũ Đức Toàn</li>
+                                    <li style="width:100px;">13/04/2022</li>
+                                    <li style="width:200px;">53.000.000</li>
+                                    <li style="width:100px; float:right; text-align:right;">
+                                        <a class="lnkSua lnkChiTiet" name="btnChiTiet3" id="btnChiTiet3" data-id="3" data-trangthai="0" title="Xem chi tiết" href="#">Chi tiết</a>
+                                    </li>
+                                </ul>
+                                <div class="danhsach-subitem" id="chiTietDonHang3">
+                                    <ul class="danhsach-subitem-header">
+                                        <li style="width:250px;">Sản phẩm</li>
+                                        <li style="width:100px;">Số lượng</li>
+                                        <li style="width:130px;">Đơn giá</li>
+                                        <li style="width:200px;">Tổng tiền</li>
+                                    </ul>
+                                    <ul class="danhsach-subitem-item">
+                                        <li style="width:250px;">Sh 150cc</li>
+                                        <li style="width:100px;">1</li>
+                                        <li style="width:130px;">120.200.000</li>
+                                        <li style="width:200px;">1.200.000</li>
+                                    </ul>
+                                    <ul class="danhsach-subitem-item">
+                                        <li style="width:250px;">Đèn nháy</li>
+                                        <li style="width:100px;">2</li>
+                                        <li style="width:130px;">55.000</li>
+                                        <li style="width:200px;">110.000</li>
+                                    </ul>
+                                    <ul class="danhsach-subitem-item">
+                                        <li style="width:250px;">Bảo hiểm</li>
+                                        <li style="width:100px;">1</li>
+                                        <li style="width:130px;">145.000</li>
+                                        <li style="width:200px;">145.000</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--END DANH SACH-->
+                        <div class="danhsach-navigation">
+                            <a name="btnThemDanhMuc" id="btnThemDanhMuc">
+                                < Trang cũ</a>
+                                    <label id="lblTrang">1/4 trang</label>
+                                    <a name="btnThemDanhMuc" id="btnThemDanhMuc">Trang kế ></a>
+                        </div>
+                    </div>
+                    <!--END CONTENT-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

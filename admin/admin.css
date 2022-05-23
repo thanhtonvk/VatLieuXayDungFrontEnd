@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* commant */
+.mrl {
+    margin: 0 12px 0 10px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-lg-3 {
+    width: 25%;
+}
+
+.col-sm-6 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+}
+.col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+}
+
+.d-fl {
+    display: flex;
+    flex-wrap: wrap !important;
+}
+
+.text-center {
+    text-align: center;
+
+}
+
+.d-bl {
+    display: block !important;
+}
+
+.clear-both {
+    clear: both;
+}
+
+/* commant */
+
+#main {
+    /* background-color:; */
+}
+
+.c-danger {
+    color: #306850 !important;
+}
+.wrapper {
+    position: relative;
+    top: 0;
+    height: 1168px;
+}
+
+.sidebar {
+    width: 260px;
+    display: block;
+    font-weight: 200;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-size: cover;
+    background-position: center center;
+    background-color: #fff;
+}
+
+.sidebar .sidebar-wrapper {
+    position: relative;
+    overflow: auto;
+    width: 260px;
+    z-index: 4;
+    height: 100vh;
+    box-shadow: inset -1px 0 0 0 #ddd;
+}
+
+.sidebar-wrapper .logo {
+    width: 260px;
+    height: 100px;
+}
+
+.logo img {
+    background-size: cover;
+    width: 260px;
+    height: 100px;
+    padding: 10px;
+    background-color: #333;
+}
+
+.sidebar-wrapper .nav {
+    margin-top: 40px;
+}
+
+.nav li {
+    list-style-type: none;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.nav li i {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav > li > a {
+    display: inline-flex;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    margin: 20px 0;
+    opacity: 0.7;
+}
+
+.nav li:hover a {
+    opacity: 1;
+}
+
+.up-pro {
+    margin-top: 140px;
+    border-top: 1px solid #333;
+    margin-right: 10px;
+    
+}
+
+.main-panel {
+    background-color: #f4f3ef;
+    position: relative;
+    z-index: 2;
+    float: right;
+    width: calc(100% - 260px);
+    min-height: 75px;
+}
+
+.main-panel .navbar {
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 16px;
+    z-index: 3;
+}
+
+.main-panel .navbar-default {
+    background-color: #f4f3ef;
+    border-bottom: 1px solid #ddd;
+    line-height: 75px;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar .navbar-brand {
+    font-weight: 600;
+    margin: 5px 0;
+    padding: 20px 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    opacity: 0.5;
+}
+
+.navbar .navbar-brand:hover {
+    opacity: 1;
+}
+
+li .active::after {
+    border-right: 17px solid #ccc;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -1px;
+    top: 150px;
+    z-index: 3;
+}
+
+.navbar-right {
+    display: inline-flex;
+}
+
+.navbar-right > li > a {
+    margin: 0;
+    line-height: normal;
+    padding: 10px;
+}
+
+.navbar-right > li > a > p {
+    margin-left: 8px;
+}
+.main-panel > .main-content {
+    padding: 30px 15px;
+    min-height: calc(100vh - 123px);
+}
+
+.card {
+    border-radius: 6px;
+    box-shadow: 0 2px 2px rgba(204,197,185,.5);
+    background-color: #fff;
+    color: #252422;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+.card .content {
+    padding: 15px 15px 10px;
+}
+
+.card .icon-big {
+    font-size: 48px;
+    min-height: 64px;
+    padding: 10px 0 0 10px;
+}
+.ti-server {
+    font-weight: 700;
+}
+.icon-warning {
+    color: #f3bb45;
+}
+
+.icon-success {
+    color: #7ac29a;
+}
+
+.icon-danger {
+    color: #eb5e28;
+}
+
+.icon-info {
+    color: #68b3c8;
+}
+
+.card .number {
+    text-align: right;
+    margin-right: 20px;
+    font-size: 32px;
+}
+.card .number p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card .footer {
+    padding: 0;
+    line-height: 30px;
+}
+
+.card .footer hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-color: #f1eae0;
+}
+
+.card .start {
+    color: #a9a9a9;
+    font-weight: 300;
+}
+
+.card .start i {
+    min-width: 15px;
+    display: inline-block;
+}
+.card .header {
+    padding: 20px 20px 0;
+}
+
+.card .title {
+    margin: 0;
+    color: #252422;
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.header p {
+    font-size: 14px;
+    opacity: 0.6;
+}

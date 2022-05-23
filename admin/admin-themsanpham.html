@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QT</title>
+    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="./assets/fonts-icon/themify-icons/themify-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link type="text/css" href="../files/css/main.css" rel="stylesheet" />
+    <script type="text/javascript" src="../files/js/jquery_min.js"></script>
+    <script type="text/javascript" src="../files/js/danhmuc.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="sidebar-wrapper">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <img src="/assets/img/logo/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <ul class="nav">
+
+                        <li>
+                            <a href="./admin-danhmuc.html" class="c-danger active">
+                                <i class="ti-panel mrl"></i>
+                                <p>Quản lý danh mục</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./admin-sanpham.html">
+                                <i class="ti-user mrl"></i>
+                                <p>Quản lý sản phẩm</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./admin-donhang.html">
+                                <i class="ti-view-list-alt mrl"></i>
+                                <p>Đơn hàng</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-panel">
+
+                <div class="main-content">
+
+                    <!--CONTENT-->
+                    <div class="content">
+                        <p class="content-title">Thêm sản phẩm mới</p>
+                        <form name="frmThemDanhMucMoi" id="frmThemDanhMucMoi" method="post" action="#">
+                            Tên sản phẩm:<br/>
+                            <input type="text" class="txt" name="txtTenDanhMuc" id="txtTenDanhMuc" required style="width:300px;" /><br/><br/> Hãng sản xuất:<br/>
+                            <select class="txt" name="cmbDanhMuc" id="cmbDanhMuc" style="width:320px;">
+            	<option value="1">Xi măng</option>
+                <option value="2">Gạch Ốp lát</option>
+                <option value="3">Dụng cụ xây dựng</option>
+                <option value="4">Vật liệu xây dựng khác</option>
+            </select>
+                            <br/><br/> Hình ảnh:<br/>
+                            <input type="file" id="myfile" name="myfile"><br><br> Số lượng:<br/>
+                            <input type="number" min="1" max="99999" class="txt" name="txtTenDanhMuc" id="txtTenDanhMuc" required style="width:300px;" /><br/><br/> Đơn giá:<br/>
+                            <input type="number" min="1" max="100000000" class="txt" name="txtTenDanhMuc" id="txtTenDanhMuc" required style="width:300px;" /><br/><br/>
+                            <input type="submit" class="btn" name="btnThemDanhMuc" id="btnThemDanhMuc" value="Thêm" />
+                        </form>
+                    </div>
+                    <!--END CONTENT-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
