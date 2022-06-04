@@ -43,39 +43,32 @@
                             </header>
 
                             <ul class="header__notify-list">
+                                <div id="list-giohang"></div>
+                                <script>
+                                    var jsonString = localStorage.getItem('giohang')
+                                    var list = JSON.parse(jsonString)
+                                    for (var i = 0; i < list.length; i++) {
+                                        console.log(list[i])
+                                    }
+                                    var html = ''
 
-                                <li class="header__notify-item">
+                                    for (var i = 0; i < list.length; i++) {
+                                        html = html + ` <li class="header__notify-item">
                                     <a href="" class="header__notify-link">
-                                        <img src="/assets/img/san pham/daythep.jpg" alt="" class="header__notify-img" width="200px" height="200px">
+                                        <img src="${list[i].hinhanh}" alt="" class="header__notify-img" width="200px" height="200px">
                                         <div class="header__notify-info">
-                                            <span class="header__notify-name">Dây thép buộc mạ kẽm</span>
+                                            <span class="header__notify-name">${list[i].tensp}</span>
                                             <span class="header__notify-desc">Mô tả chi tiết sản phẩm</span>
                                         </div>
                                     </a>
-                                </li>
+                                </li>`
 
-                                <li class="header__notify-item">
-                                    <a href="" class="header__notify-link">
-                                        <img src="/assets/img/san pham/bayxaydung.jpg" alt="" class="header__notify-img" width="200px" height="200px">
-                                        <div class="header__notify-info">
-                                            <span class="header__notify-name">Bay xây dựng A1 cán gỗ</span>
-                                            <span class="header__notify-desc">Mô tả chi tiết sản phẩm</span>
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li class="header__notify-item">
-                                    <a href="" class="header__notify-link">
-                                        <img src="/assets/img/san pham/giayrap.jpg" alt="" class="header__notify-img" width="200px" height="200px">
-                                        <div class="header__notify-info">
-                                            <span class="header__notify-name">Giấy ráp JB5 (40m)</span>
-                                            <span class="header__notify-desc">Mô tả chi tiết sản phẩm</span>
-                                        </div>
-                                    </a>
-                                </li>
+                                    }
+                                    document.getElementById('list-giohang').innerHTML = html
+                                </script>
                             </ul>
                             <footer class="header__notify-footer">
-                                <a href="" class="header__notify-footer-btn">
+                                <a href="./giohang.html" class="header__notify-footer-btn">
                                     Xem tất cả
                                 </a>
                             </footer>

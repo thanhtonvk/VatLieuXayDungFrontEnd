@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="/assets/sanpham.css">
     <link rel="stylesheet" href="/assets/fonts-icon/themify-icons/themify-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
+<script>
+    $(document).ready(function() {
+        $("#btn-buy").click(function() {
+            const tensp = $("#txt-tensp").text();
+            const gia = $("#txt-gia").text();
+            const hinhanh = $("#img-sanpham").attr('src');
+            jsonString = localStorage.getItem('giohang')
+            var list = JSON.parse(jsonString)
+            if (list == null) {
+                list = [];
+                list.push({
+                    "tensp": tensp,
+                    "gia": gia,
+                    "hinhanh": hinhanh
+                })
+            } else {
+                list.push({
+                    "tensp": tensp,
+                    "gia": gia,
+                    "hinhanh": hinhanh
+                })
+            }
+            alert("Thêm giỏ hàng thành công")
+            localStorage.setItem('giohang', JSON.stringify(list))
+        })
+
+    })
+    console.log(localStorage.getItem('giohang'))
+</script>
+
 <body>
     <div class="header">
         <div class="nav-bar">
@@ -15,8 +47,7 @@
                 <div class="container">
                     <div class="navbar-logo">
                         <a href="/index.html">
-                            <img src="/assets/img/logo/logo.png" alt="Shopping Online" width="200px" height="50px"
-                                background-color="#306850">
+                            <img src="/assets/img/logo/logo.png" alt="Shopping Online" width="200px" height="50px" background-color="#306850">
                         </a>
                     </div>
                     <div class="nav-bar-content">
@@ -28,7 +59,7 @@
                             <li class="nav-item"><a href="">LIÊN HỆ</a></li>
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -42,9 +73,9 @@
                                 Tìm kiếm
                             </button>
                         </span>
-    
+
                     </div>
-    
+
                 </div>
             </div>
         </div>
@@ -54,8 +85,7 @@
                 <h1 class="header-text">Vật liệu xây dựng</h1>
                 <p1 class="header-text2">
                     Vật liệu xây dựng - Tất cả sảng phẩm
-                    <strong>Vật liệu xây dựng</strong>
-                    mới nhất, cập nhật 2022, COD toàn quốc, đổi trả hàng nếu không hài lòng. Mua sắm online tại
+                    <strong>Vật liệu xây dựng</strong> mới nhất, cập nhật 2022, COD toàn quốc, đổi trả hàng nếu không hài lòng. Mua sắm online tại
                     <strong>web</strong>
                 </p1>
             </div>
@@ -68,41 +98,40 @@
                     <a class="hyper">/</a>
                     <li class="sub-nav-item"><a href="#">Vật liệu xây dựng</a></li>
                     <a class="hyper">/</a>
-                    <li class="sub-nav-item"><a href="#">Tời Quay Tay 600 LBS Tải Trọng 272 Kg Có Cáp Móc 8 Mét Liên Sơn</a></li>
+                    <li class="sub-nav-item"><a href="#">Tời Quay Tay 600 LBS Tải Trọng 272 Kg Có Cáp Móc 8 Mét Liên
+                            Sơn</a></li>
                 </ul>
             </div>
         </section>
     </div>
-    
+
     <div class="content pb-30">
         <div class="container">
             <div class="x-box">
                 <div class="row mx-0">
                     <div class="col-md-5 p-20">
-                        <img class="img-product" src="/assets/img/chi-tiet-san-pham/toiquaytay.jpg" alt="San Pham" loading="lazy" width="525px" height="525px">
+                        <img class="img-product" id="img-sanpham" src="/assets/img/chi-tiet-san-pham/toiquaytay.jpg" alt="San Pham" loading="lazy" width="525px" height="525px">
                     </div>
 
                     <div class="col-md-5 p-20 info-product">
 
-                        <h1 class="name-product"> 
-                            Tời Quay Tay 600 LBS Tải Trọng 272 Kg Có Cáp Móc 8 Mét Liên Sơn                        </h1>
+                        <h1 class="name-product" id="txt-tensp">
+                            Tời Quay Tay 600 LBS Tải Trọng 272 Kg Có Cáp Móc 8 Mét Liên Sơn </h1>
 
                         <span class="quest">
-                            Mua Tời Quay Tay 600 LBS Tải Trọng 272 Kg Có Cáp Móc 8 Mét Liên Sơn ở đâu?                        </span>
+                            Mua Tời Quay Tay 600 LBS Tải Trọng 272 Kg Có Cáp Móc 8 Mét Liên Sơn ở đâu? </span>
 
                         <div class="desc-product pt-10">
                             <label>
                                 Cửa hàng
-                            </label>
-                            :
+                            </label> :
                             <a href="#">Cơ Khí Liên Sơn</a>
                         </div>
 
                         <div class="desc-product pt-10">
                             <label>
                                 Trạng thái
-                            </label>
-                            :
+                            </label> :
                             <span>Còn hàng</span>
                             <i class="ti-check-box"></i>
                         </div>
@@ -110,55 +139,54 @@
                         <div class="desc-product pt-10">
                             <label>
                                 Kho hàng
-                            </label>
-                            :
+                            </label> :
                             <span>TP. Hồ Chí Minh</span>
                         </div>
 
                         <div class="desc-product pt-10">
                             <label>
                                 Giá mua ngay tại
-                            </label>
-                            :
+                            </label> :
                             <a href="#">Shoppe.vn</a>
                         </div>
-                        <div class="price">489.000 ₫</div>
+                        <div class="price">
+                            <p id="txt-gia">489000</p>
+                        </div>
 
                         <div class="btn-buy-review">
-                            <a class="buy-btn" href="#">
+                            <button type="button" class="buy-btn" id="btn-buy">
                                 <i class="ti-shopping-cart"></i>
                                 Đặt hàng ngay
-                            </a>
+                            </button>
 
                             <a class="review-btn ml-6" href="#">
-                                <i class="ti-star"></i>
-                                Review
+                                <i class="ti-star"></i> Review
                             </a>
                         </div>
 
                         <div class="list-group">
                             <a href="#" class="list-group-item">
                                 <img src="/assets/img/logo/shoppe.png" alt="Logo">
-                                <button class="btn-sm float-end" >Xem  Giá Shoppe.vn</button>
+                                <button class="btn-sm float-end">Xem Giá Shoppe.vn</button>
                             </a>
 
                             <a href="#" class="list-group-item">
                                 <img src="/assets/img/logo/lazada.png" alt="Logo">
-                                <button class="btn-sm float-end" >Xem  Giá Lazada.vn</button>
+                                <button class="btn-sm float-end">Xem Giá Lazada.vn</button>
                             </a>
 
                             <a href="#" class="list-group-item">
                                 <img src="/assets/img/logo/tiki.png" alt="Logo">
-                                <button class="btn-sm float-end" >Xem  Giá Tiki.vn</button>
+                                <button class="btn-sm float-end">Xem Giá Tiki.vn</button>
                             </a>
 
                             <a href="#" class="list-group-item">
                                 <img src="/assets/img/logo/sendo.png" alt="Logo">
-                                <button class="btn-sm float-end" >Xem  Giá Sendo.vn</button>
+                                <button class="btn-sm float-end">Xem Giá Sendo.vn</button>
                             </a>
                         </div>
 
-                        
+
                     </div>
                 </div>
             </div>
@@ -171,47 +199,31 @@
                     <div class="detail-header">
                         <h1>Mô tả sản phẩm</h1>
                     </div>
-    
+
                     <div class="detail-content mt-16">
                         <div class="detail-desc">
                             <h2 class="desc-title">
-                                Giới thiệu Tời Quay Tay 600 LBS Tải Trọng 272 Kg Có Cáp Móc 8 Mét Liên Sơn                            
+                                Giới thiệu Tời Quay Tay 600 LBS Tải Trọng 272 Kg Có Cáp Móc 8 Mét Liên Sơn
                             </h2>
-                            <br>
-                            ***THÔNG TIN MÔ TẢ:
-                            <br>
-                            Tời quay tay kéo 360kg 600LB
-                            <br>
-                            Tải trọng kéo ngang: 360kg ~ 600LB
-                            <br>
-                            Cáp+ móc : 8 mét
-                            <br>
-                            Chế độ: block tay
+                            <br> ***THÔNG TIN MÔ TẢ:
+                            <br> Tời quay tay kéo 360kg 600LB
+                            <br> Tải trọng kéo ngang: 360kg ~ 600LB
+                            <br> Cáp+ móc : 8 mét
+                            <br> Chế độ: block tay
                             <br>
                             <img class="desc-img" src="/assets/img/chi-tiet-san-pham/8037e3898b3ac137bfae29bd1304822e.jpg" alt="Anh san pham" width="525px" height="525px" loading="lazy">
-                            <br>
-                            ***CÔNG DỤNG:
-                            <br>
-                            Đặt tời theo hướng của vật hoặc hướng cáp di chuyển để kéo vật. Trên đế tời có các lỗ bu lông chờ ta liên kết với tời . Vị trí để cố định tời phải đảm bảo tải trọng giữ, kéo trong quá trình thực hiện.
-                            <br>
-                            Trước khi thực hiện việc quấn hoặc nhả tải ta phải kiểm tra xem cóc hãm đã hoạt động hay chưa
-                            <br>
-                            Bậc cóc hảm theo chiều quấn vào nhả cáp ra theo ý muốn
-                            <br>
-                            Bằng cách thử quay tay quay của tời, ta quay một vài vòng nếu có kêu tiếng tạch tạch cùng với hoạt động quay của tời tức là cóc đã hoạt động và ta tiến hành nâng hạ tải bình thường.
-                            <br>
-                            Cảm ơn anh chị đã ghe thăm Cơ Khí Liên Sơn
-                            <br>
-                            +> Khách hàng mua theo kg liên hệ để nhận báo giá
-                            <br>
-                            Hotline/ Zalo : 0968.937.203
-                            <br>
-                            *** Cảm ơn các bạn thật nhiều vì đã ủng hộ Shop !
-                            <br>
-                            Anh chị ở thành phố HCM gọi vào Hotline: 0352.035.399 hoặc 0902.801.505 để em hỗ trợ tốt hơn ạ
-                            <br>
-                            #toiquaytay #toiquaytay800LB 
-                        </div>     
+                            <br> ***CÔNG DỤNG:
+                            <br> Đặt tời theo hướng của vật hoặc hướng cáp di chuyển để kéo vật. Trên đế tời có các lỗ bu lông chờ ta liên kết với tời . Vị trí để cố định tời phải đảm bảo tải trọng giữ, kéo trong quá trình thực hiện.
+                            <br> Trước khi thực hiện việc quấn hoặc nhả tải ta phải kiểm tra xem cóc hãm đã hoạt động hay chưa
+                            <br> Bậc cóc hảm theo chiều quấn vào nhả cáp ra theo ý muốn
+                            <br> Bằng cách thử quay tay quay của tời, ta quay một vài vòng nếu có kêu tiếng tạch tạch cùng với hoạt động quay của tời tức là cóc đã hoạt động và ta tiến hành nâng hạ tải bình thường.
+                            <br> Cảm ơn anh chị đã ghe thăm Cơ Khí Liên Sơn
+                            <br> +> Khách hàng mua theo kg liên hệ để nhận báo giá
+                            <br> Hotline/ Zalo : 0968.937.203
+                            <br> *** Cảm ơn các bạn thật nhiều vì đã ủng hộ Shop !
+                            <br> Anh chị ở thành phố HCM gọi vào Hotline: 0352.035.399 hoặc 0902.801.505 để em hỗ trợ tốt hơn ạ
+                            <br> #toiquaytay #toiquaytay800LB
+                        </div>
 
                         <div class="text-center">
                             <a href="#">Xem thêm thông tin sản phẩm</a>
@@ -273,12 +285,9 @@
                             </a>
 
                             <div class="sub-f-about">
-                                <p> Chúng tôi cung cấp thông tin giá, mô tả, hình ảnh và thông tin chi tiết của sản phẩm
-                                    Vật liệu xây dựng, Dụng cụ xây dựng, Nhu yếu phẩm xây dựng, Thiết bị công trình,
-                                    Công cụ hỗ trợ, Nguyên liệu xây dựng, Gạch đá & xi măng... từ các sàn thương mại
-                                    điện tử uy tín, nhằm giúp khách hàng lựa chọn sản phẩm phù hợp với giá tốt nhất.</p>
-                                <p>Quý khách cần thêm thông tin khác về sản phẩm vui lòng liên hệ trực tiếp với cửa hàng
-                                    trên Tiki, Shopee, Lazada, Sendo... bằng cách nhấn vào "<strong>Đến nơi bán
+                                <p> Chúng tôi cung cấp thông tin giá, mô tả, hình ảnh và thông tin chi tiết của sản phẩm Vật liệu xây dựng, Dụng cụ xây dựng, Nhu yếu phẩm xây dựng, Thiết bị công trình, Công cụ hỗ trợ, Nguyên liệu xây dựng, Gạch đá & xi măng...
+                                    từ các sàn thương mại điện tử uy tín, nhằm giúp khách hàng lựa chọn sản phẩm phù hợp với giá tốt nhất.</p>
+                                <p>Quý khách cần thêm thông tin khác về sản phẩm vui lòng liên hệ trực tiếp với cửa hàng trên Tiki, Shopee, Lazada, Sendo... bằng cách nhấn vào "<strong>Đến nơi bán
                                     </strong>" và nhắn tin trực tiếp với shop.</p>
                                 <i>Xin lưu ý: Chúng tôi không bán hàng không rõ nguồn gốc xuất xứ.</i>
                             </div>
@@ -346,6 +355,7 @@
         </div>
 
     </div>
-    
+
 </body>
+
 </html>

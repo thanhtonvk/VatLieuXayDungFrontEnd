@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/assets/giohang.css">
 </head>
+
 <body>
     <div class="header">
         <div class="nav-bar">
@@ -14,8 +16,7 @@
                 <div class="container">
                     <div class="navbar-logo">
                         <a href="/index.html">
-                            <img src="/assets/img/logo/logo.png" alt="Shopping Online" width="200px" height="50px"
-                                background-color="#306850">
+                            <img src="/assets/img/logo/logo.png" alt="Shopping Online" width="200px" height="50px" background-color="#306850">
                         </a>
                     </div>
                     <div class="nav-bar-content">
@@ -27,7 +28,7 @@
                             <li class="nav-item"><a href="">LIÊN HỆ</a></li>
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -50,8 +51,7 @@
                 <h1 class="header-text">Vật liệu xây dựng</h1>
                 <p1 class="header-text2">
                     Vật liệu xây dựng - Tất cả sảng phẩm
-                    <strong>Vật liệu xây dựng</strong>
-                    mới nhất, cập nhật 2022, COD toàn quốc, đổi trả hàng nếu không hài lòng. Mua sắm online tại
+                    <strong>Vật liệu xây dựng</strong> mới nhất, cập nhật 2022, COD toàn quốc, đổi trả hàng nếu không hài lòng. Mua sắm online tại
                     <strong>web</strong>
                 </p1>
             </div>
@@ -67,7 +67,7 @@
                 </ul>
             </div>
         </section>
-    </div>    
+    </div>
     <div class="container">
         <div class="Role">
             <div class="new">
@@ -76,97 +76,18 @@
                 <div class="info3">Số lượng</div>
                 <div class="info4">Số tiền</div>
             </div>
-            <div class="infoProduct">
-                <div class="product">
-                    <div class="all">
-                        <div class="first">
-                            <div class="head">
-                                <a tittle="Dây Đồng Bọc Cách Điện Kích Thước 0,4li, 0,5li, 1li, 1,5li, 2li -Dây Đồng Bọc Nhựa" ></a>
-                                <div>
-                                    <img class="img-product" src="./assets/img/san pham/daydong.jpg" alt="San Pham" loading="lazy">
-                                </div>
-                                <div class="text-center">
-                                    <a class="text">Dây Đồng Bọc Cách Điện</a>
-                                </div>
-                             </div>
-                        </div>
-                    
-                        <div class="second">
-                            <div>
-                                <span >25.000 ₫</span>
-                            </div>
-                        </div>
-                        <div class="button">
-                            <div>5</div>
-                        </div>
-                        <div class="extra">125.000 đ</div>
-                    </div>
-                </div>
-            </div>
-            <div class="infoProduct">
-                <div class="product">
-                    <div class="all">
-                        <div class="first">
-                            <div class="head">
-                                <a tittle="Dây Đồng Bọc Cách Điện Kích Thước 0,4li, 0,5li, 1li, 1,5li, 2li -Dây Đồng Bọc Nhựa" ></a>
-                                <div>
-                                    <img class="img-product" src="/assets/img/san pham/daythep.jpg" alt="San Pham" loading="lazy">
-                                </div>
-                                <div class="text-center">
-                                    <a class="text">Dây thép buộc mạ kẽm</a>
-                                </div>
-                             </div>
-                        </div>
-                    
-                        <div class="second">
-                            <div>
-                                <span >65.000 đ</span>
-                            </div>
-                        </div>
-                        <div class="button">
-                            <div>2</div>
-                        </div>
-                        <div class="extra">130.000 ₫</div>
-                    </div>
-                </div>
-            </div>
-            <div class="infoProduct">
-                <div class="product">
-                    <div class="all">
-                        <div class="first">
-                            <div class="head">
-                                <a tittle="Dây Đồng Bọc Cách Điện Kích Thước 0,4li, 0,5li, 1li, 1,5li, 2li -Dây Đồng Bọc Nhựa" ></a>
-                                <div>
-                                    <img class="img-product" src="/assets/img/san pham/khuonnhua.jpg" alt="San Pham" loading="lazy">
-                                </div>
-                                <div class="text-center">
-                                    <a class="text">Khuôn nhựa đúc bê tông</a>
-                                </div>
-                             </div>
-                        </div>
-                    
-                        <div class="second">
-                            <div>
-                                <span >55.000 ₫</span>
-                            </div>
-                        </div>
-                        <div class="button">
-                            <div>3</div>
-                        </div>
-                        <div class="extra">165.000 đ</div>
-                    </div>
-                </div>
-            </div>
+            <div id="list-giohang"></div>
             <!-- tổng thanh toán -->
             <div class="extraSale">
                 <div class="price">
-                    <div>Tổng thanh toán(10 sản phẩm) : </div>
-                    <div class="buy">420.000 đ</div>
+                    <div>Tổng thanh toán : </div>
+                    <div class="buy">
+                        <p id="txt-tong">0 đ</p>
+                    </div>
                 </div>
                 <div class="btn-buy-review">
                     <a class="buy-btn" href="#">
-                        <i class="ti-shopping-cart"></i>
-                            Mua hàng
+                        <i class="ti-shopping-cart"></i> Mua hàng
                     </a>
                 </div>
             </div>
@@ -175,4 +96,48 @@
 
     <!--  -->
 </body>
+
 </html>
+<script>
+    var jsonString = localStorage.getItem('giohang')
+    var list = JSON.parse(jsonString)
+    for (var i = 0; i < list.length; i++) {
+        console.log(list[i])
+    }
+    var html = ''
+    var sum = 0
+    for (var i = 0; i < list.length; i++) {
+        console.log(parseInt(list[i].gia))
+        sum = sum + parseInt(list[i].gia)
+        html = html + ` <div class="infoProduct">
+                <div class="product">
+                    <div class="all">
+                        <div class="first">
+                            <div class="head">
+                                <a tittle="${list[i].tensp}"></a>
+                                <div>
+                                    <img class="img-product" src="${list[i].hinhanh}" alt="San Pham" loading="lazy">
+                                </div>
+                                <div class="text-center">
+                                    <a class="text">Dây Đồng Bọc Cách Điện</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="second">
+                            <div>
+                                <span>${list[i].gia} ₫</span>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <div>1</div>
+                        </div>
+                        <div class="extra">125.000 đ</div>
+                    </div>
+                </div>
+            </div>`
+
+    }
+    document.getElementById('list-giohang').innerHTML = html
+    document.getElementById('txt-tong').innerHTML = sum + "đ"
+</script>
